@@ -8,7 +8,7 @@ with open('README.md') as f:
     long_description = f.read()
 
 version_re = re.compile('^Version: (.+)$', re.M)
-package_name = 'django-admin-log'
+package_name = 'django-admin-blame'
 
 
 def get_version():
@@ -58,16 +58,16 @@ def get_version():
 
 
 setup(
-    name='django-admin-smoke',
+    name='django-admin-blame',
     version=get_version() or 'dev',
     long_description=long_description,
     long_description_content_type='text/markdown',
     packages=['admin_log'],
-    url='https://github.com/just-work/django-admin-smoke',
+    url='https://github.com/just-work/django-admin-blame',
     license='MIT',
     author='Sergey Tikhonov',
     author_email='zimbler@gmail.com',
-    description='Smoke tests for Django admin',
+    description='Tools for logging changes made from Django admin',
     install_requires=[
         'Django',
     ],
