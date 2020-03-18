@@ -1,18 +1,18 @@
-Django-admin-log
+django-admin-blame
 ==================
 
-Django-Admin-Log is a Django app providing mixins for tracking date and author
+django-admin-blame is a Django app providing mixins for tracking date and author
 of model changes from django admin.
 
-[![Build Status](https://travis-ci.org/just-work/django-admin-log.svg?branch=master)](https://travis-ci.org/just-work/django-admin-log)
-[![codecov](https://codecov.io/gh/just-work/django-admin-log/branch/master/graph/badge.svg)](https://codecov.io/gh/just-work/django-admin-log)
-[![PyPI version](https://badge.fury.io/py/django-admin-log.svg)](https://badge.fury.io/py/django-admin-log)
+[![Build Status](https://travis-ci.org/just-work/django-admin-blame.svg?branch=master)](https://travis-ci.org/just-work/django-admin-blame)
+[![codecov](https://codecov.io/gh/just-work/django-admin-blame/branch/master/graph/badge.svg)](https://codecov.io/gh/just-work/django-admin-blame)
+[![PyPI version](https://badge.fury.io/py/django-admin-blame.svg)](https://badge.fury.io/py/django-admin-blame)
 
 Description
 -----------
 
 Often it is useful to know date and author of object creation or modification.
-Django-admin-log provides a django model mixin with fields:
+django-admin-blame provides a django model mixin with fields:
 * created (datetime) - timestamp of object creation
 * created_by (FK to User) - reference to an admin user who created this object
     through admin site
@@ -25,7 +25,7 @@ Installation
 ------------
 
 ```shell script
-pip install django-admin-log
+pip install django-admin-blame
 ```
 
 Working example is in `testproject.testapp`.
