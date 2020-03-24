@@ -1,10 +1,12 @@
 from typing import Optional
 
 from django.http import HttpRequest
-from django.utils.decorators import classproperty
 
 
 class AdminLogMiddleware:
+    """
+    Holds a singleton reference to current request and provides staff user id.
+    """
     request: Optional[HttpRequest]
 
     def __init__(self, get_response):
@@ -20,6 +22,9 @@ class AdminLogMiddleware:
 
     @classmethod
     def get_user_id(cls) -> Optional[int]:
+        """
+        Returns current user ID if user is authorized and marked as staff.
+        """
         request = getattr(cls, 'request', None)
         if request is None:
             return None
