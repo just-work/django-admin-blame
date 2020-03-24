@@ -70,6 +70,7 @@ setup(
     description='Tools for logging changes made from Django admin',
     install_requires=[
         'Django',
+        'django-model-utils',
     ],
     classifiers=[
         'Development Status :: 1 - Planning',
