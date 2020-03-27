@@ -63,6 +63,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     packages=['admin_log'],
+    include_package_data=True,
     url='https://github.com/just-work/django-admin-blame',
     license='MIT',
     author='Sergey Tikhonov',
