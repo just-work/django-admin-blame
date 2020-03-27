@@ -21,8 +21,8 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 #: admin_log/models.py:13
 msgid "Created by"
-msgstr "Создан"
+msgstr "Создал"
 
 #: admin_log/models.py:16
 msgid "Modified by"
-msgstr "Изменен"
+msgstr "Изменил"
