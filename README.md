@@ -36,26 +36,25 @@ Working example is in `testproject.testapp`.
     ```
 2. Add model mixin to your models:
     ```python
-    from django.contrib.auth.models import AbstractUser
+    from django.db import models
     
     from admin_log.models import AdminLogMixin
     
     
-    class User(AdminLogMixin, AbstractUser):
-        pass
+    class Subject(AdminLogMixin, models.Model):
+        title = models.CharField(max_length=50)
+        content = models.TextField()
     ```
 3. Add admin mixin to corresponding model admin:
     ```python
     from django.contrib import admin
     
-    from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-    
     from admin_log.admin import AdminLogMixin
     from testproject.testapp import models
     
     
-    @admin.register(models.User)
-    class UserAdmin(AdminLogMixin, BaseUserAdmin):
+    @admin.register(models.Subject)
+    class SubjectAdmin(AdminLogMixin, admin.ModelAdmin):
         pass
     ```
 
