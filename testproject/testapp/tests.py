@@ -33,7 +33,7 @@ class SubjectAdminTestCase(AdminTests, AdminBaseTestCase):
         """ Modified by is set to None if modified outside of django admin."""
         self.subject.title = 'Subject 1(modified)'
 
-        self.subject.save()
+        self.subject.save(update_fields=['title'])
 
         self.assert_object_fields(
             self.subject,
