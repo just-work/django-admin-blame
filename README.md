@@ -4,7 +4,7 @@ django-admin-blame
 django-admin-blame is a Django app providing mixins for tracking date and author
 of model changes from django admin.
 
-[![Build Status](https://travis-ci.org/just-work/django-admin-blame.svg?branch=master)](https://travis-ci.org/just-work/django-admin-blame)
+[![Build Status](https://github.com/just-work/django-admin-blame/workflows/build/badge.svg?branch=master&event=push)](https://github.com/just-work/django-admin-blame/actions?query=event%3Apush+branch%3Amaster+workflow%3Abuild)
 [![codecov](https://codecov.io/gh/just-work/django-admin-blame/branch/master/graph/badge.svg)](https://codecov.io/gh/just-work/django-admin-blame)
 [![PyPI version](https://badge.fury.io/py/django-admin-blame.svg)](https://badge.fury.io/py/django-admin-blame)
 
