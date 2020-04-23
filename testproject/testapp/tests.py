@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 from testproject.testapp import admin, models
 
 
-class UserAdminTestCase(AdminTests, AdminBaseTestCase):
+class SubjectAdminTestCase(AdminTests, AdminBaseTestCase):
     model_admin = admin.SubjectAdmin
     model = models.Subject
     object_name = 'subject'
