@@ -1,5 +1,6 @@
 from admin_smoke.tests import AdminTests, AdminBaseTestCase
 from django.contrib.auth import get_user_model
+from django_testing_utils.mixins import second
 
 from testproject.testapp import admin, models
 
@@ -30,14 +31,20 @@ class SubjectAdminTestCase(AdminTests, AdminBaseTestCase):
             created_by=None)
 
     def test_modified_by_without_admin(self):
-        """ Modified by is set to None if modified outside of django admin."""
+        """
+        Modified by is set to None if modified outside of django admin.
+
+        Modified is still changed on save call.
+        """
         self.subject.title = 'Subject 1(modified)'
 
+        self.now += second
         self.subject.save(update_fields=['title'])
 
         self.assert_object_fields(
             self.subject,
-            modified_by=None)
+            modified_by=None,
+            modified=self.now)
 
     def test_changeform_create(self):
         """ Created_by/modified_by for new user are set to logger user."""

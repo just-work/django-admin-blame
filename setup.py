@@ -71,10 +71,10 @@ setup(
     description='Tools for logging changes made from Django admin',
     install_requires=[
         'Django>=2.2,<3.2',
-        'django-model-utils>=4.0,<4.1',
+        'django-model-utils>=4.1,<4.2',
     ],
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Framework :: Django :: 2.2',
         'Framework :: Django :: 3.0',
