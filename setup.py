@@ -70,7 +70,7 @@ setup(
     author_email='zimbler@gmail.com',
     description='Tools for logging changes made from Django admin',
     install_requires=[
-        'Django>=2.2,<3.2',
+        'Django>=2.2,<3.3',
         'django-model-utils>=4.1,<4.2',
     ],
     classifiers=[
@@ -79,6 +79,7 @@ setup(
         'Framework :: Django :: 2.2',
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
         'Operating System :: POSIX',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
