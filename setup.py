@@ -70,21 +70,23 @@ setup(
     author_email='zimbler@gmail.com',
     description='Tools for logging changes made from Django admin',
     install_requires=[
-        'Django>=2.2,<3.3',
+        'Django>=2.2,<4.1',
         'django-model-utils>=4.2.0,<4.3.0',
     ],
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
         'Framework :: Django :: 2.2',
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
         'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
         'Operating System :: POSIX',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         ('Topic :: Internet :: WWW/HTTP :: Dynamic Content :: '
          'Content Management System'),
     ]
