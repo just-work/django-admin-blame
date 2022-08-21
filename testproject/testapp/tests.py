@@ -1,6 +1,3 @@
-from datetime import datetime
-from unittest import mock
-
 from admin_smoke.tests import AdminTests, AdminBaseTestCase
 from django.contrib.auth import get_user_model
 from django_testing_utils.mixins import second
@@ -21,25 +18,6 @@ class SubjectAdminTestCase(AdminTests, AdminBaseTestCase):
             content='Some test content.'
         )
         cls.test_user = get_user_model().objects.create(username='test_user')
-
-    def setUp(self) -> None:
-        super().setUp()
-        # Django-model-utils adds django.utils.timezone.now as default to
-        # AutoCreatedField. As it is done at import time, now() method
-        # internally calls "datetime.now" since Django-4.0, which is C extension
-        # and cannot be mocked directly. So we patch a reference to
-        # datetime.datetime imported to django.utils.timezone module.
-        self.model_utils_now_patcher = mock.patch(
-            'django.utils.timezone.datetime.now',
-            side_effect=self.get_datetime_now)
-        self.model_utils_now_patcher.start()
-
-    def tearDown(self) -> None:
-        super().tearDown()
-        self.model_utils_now_patcher.stop()
-
-    def get_datetime_now(self, tz=None):
-        return self.now.astimezone(tz)
 
     def transform_to_new(self, data: dict) -> dict:
         data['title'] += '(updated)'
